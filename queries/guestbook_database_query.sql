@@ -12,7 +12,7 @@ CREATE TABLE guestbook_entries (
     email VARCHAR(255) NOT NULL,
     meet_location VARCHAR(50) NOT NULL,
     other_location VARCHAR(100),
-    message TEXT,
+    message VARCHAR(800),
     mailing_list VARCHAR(15),
     email_format ENUM('HTML', 'Text'),
     submission_time TIMESTAMP DEFAULT NOW()
