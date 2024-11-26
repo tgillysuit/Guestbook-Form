@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+main {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: grey;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: lightgrey;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: grey;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: lightskyblue;
+}

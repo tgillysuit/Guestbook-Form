@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="icon" type="image/x-icon" href="/images/smiley.png">
+    <script src="scripts/script.js"></script>
+    <title>Guestbook</title>
+</head>
+<body>
+    <main>
+        <div id="contact-form-head">
+            <h1>Contact Form</h1>
+        </div>
+        <form id="guestBookForm" method="POST" action="/success">
+            <div id="top">
+                <div class="row">
+                    <label for="fName">First Name
+                        <span class="error" id="fNameError">Field Required!</span>
+                        <input type="text" id="fName" name="firstName" class="form-input">
+                    </label>
+                    
+                    <label for="lName">Last Name
+                        <span class="error" id="lNameError">Field Required!</span>
+                        <input type="text" id="lName" name="lastName" class="form-input">
+                    </label>
+                    
+                    <label for="job">Job Title
+                        <input type="text" id="job" name="job" class="form-input">
+                    </label>
+                
+                    <label for="company">Company
+                        <input type="text" id="company" class="form-input" name="company">
+                    </label>
+                    
+                    <label for="linkedIn">LinkedIn URL
+                        <span class="error" id="linkedInError">Enter a valid LinkedIn url</span>
+                        <input type="text" id="linkedIn" class="form-input" name="linkedIn">
+                    </label>
+                    
+                    <label for="email">Email Address
+                        <span class="error" id="emailError">Enter a valid email</span>
+                        <input type="email" id="email" class="form-input" name="email">
+                    </label>
+                </div>
+            </div>
+
+            <div id="middle">
+                <div id="options" class="location">
+                    <label for="where" id="where">Where did we meet?</label>
+                    <span class="error" id="whereError">Field Required!</span>
+                    <select name="options" id="where">
+                        <option value="" disabled selected>Please select</option>
+                        <option value="highschool">High School</option>
+                        <option value="college">College</option>
+                        <option value="work">Work</option>
+                        <option value="navy">U.S. Navy</option>
+                        <option value="party">Party</option>
+                    </select>
+                </div>
+                <div id="otherLocate" class="location">
+                    <label for="other">Other (please specify)
+                        <input type="text" id="other" name="other">
+                    </label>
+                </div>
+            </div>
+            
+            <div id="bottom">
+                <div id="message-box">
+                    <label for="message">Message
+                        <textarea name="message" id="message"></textarea>
+                    </label>    
+                </div>
+
+                <div id="buttons">
+                    <div id="checkbox">
+                        <input type="checkbox" id="add-to-list" name="addToList">
+                        <label for="add-to-list">Please add me to your mailing list</label>
+                    </div>
+                    <div id="radio-email">
+                        <label for="email-format">Choose an email format:
+                            <input type="radio" id="html" name="emailFormat" value="HTML">
+                            <label for="html">HTML</label>
+                            <input type="radio" id="text" name="emailFormat" value="Text">
+                            <label for="text">Text</label>
+                        </label>
+                    </div>
+                    <button type="submit" name="submit" value="edit">Submit</button>
+                </div>    
+            </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/admin.css">
+    <title>Guestbook Admin</title>
+</head>
+<body>
+    <main>
+        <h1>Guestbook Entries</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>LinkedIn URL</th>
+                    <th>Email</th>
+                    <th>Meet Location</th>
+                    <th>Other Location</th>
+                    <th>Message</th>
+                    <th>Mailing List</th>
+                    <th>Email Format</th>
+                    <th>Date/Time of Submission</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% details.forEach(data => { %>
+                    <tr>
+                        <td><%= data.id %></td>
+                        <td><%= data.first_name %></td>
+                        <td><%= data.last_name %></td>
+                        <td><%= data.job_title %></td>
+                        <td><%= data.company %></td>
+                        <td><%= data.linkedin_url %></td>
+                        <td><%= data.email %></td>
+                        <td><%= data.meet_location %></td>
+                        <td><%= data.other_location %></td>
+                        <td><%= data.message %></td>
+                        <td><%= data.mailing_list === 'on' ? 'Yes' : 'No' %></td>
+                        <td><%= data.email_format %></td>
+                        <td><%= data.submission_time %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
